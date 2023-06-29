@@ -12,9 +12,7 @@ function imprimirResultado(resultado) {
 
 const letters = ["a", "b", "c", "d"];
 
-//letters.array.forEach(element => {
-    console.log(element)
-//});
+
 
 function forEach(array, callBackParaRodarEmCadaItem) {
     for(let index = 0; index < array.length; index ++) {
@@ -26,3 +24,15 @@ function forEach(array, callBackParaRodarEmCadaItem) {
 forEach(letters, function(letraAtual, index, array) {
 console.log(letraAtual)
 }) 
+
+
+function somar (num1, num2, callback) {
+    let resultados =  num1 + num2 
+    callback(resultados)
+}
+
+function imprimirResultados (resultados) {
+    console.log('Seu resultado é ' + resultados)
+}
+
+somar(2, 5, imprimirResultados)
